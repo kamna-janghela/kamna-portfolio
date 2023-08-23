@@ -1,61 +1,55 @@
 const projects = [
   {
     id: 1,
-    title: "PG Life",
-    live: "https://pglife-gurgaon.netlify.app",
-    github: "https://github.com/ankitgupta1020/PGLife",
-    img: "assets/projects/pg-life.jpg",
-    techs: ["HTML", "CSS", "JavaScript"],
+    title: "Sourcebae",
+    live: "https://sourcebae.com/",
+    img: "assets/projects/sourvebae.png",
+    techs: ["Web Content Writing", "EdTech Web Content Writing", "Technical Blog Writing", "Podcast Scripts", "Social Media Scripts"],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam voluptate quia ea libero accusantium molestias voluptatum assumenda exercitationem.",
+      "Sourcebae is outsourching company which help companies for remote hiring to find the best talent from India.",
   },
   {
     id: 2,
-    title: "Do you know me",
-    live: "https://replit.com/@AnkitGupta55/End-game#index.js?embed=1&output=1",
-    github: "https://github.com/ankitgupta1020/Quize-ankit.git",
-    img: "assets/projects/do-you-know-me.jpg",
-    techs: ["HTML", "CSS", "JavaScript"],
+    title: "Legal 251",
+    live: "https://legal251.com/gst-return-filing",
+    img: "assets/projects/legal251.png",
+    techs: ["Legal Writing", "Social Media Posting", "Copy Writing", "Technical Writing"],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam voluptate quia ea libero accusantium molestias voluptatum assumenda exercitationem.",
+      "Legal251 is an online legal solutions provider that comprehensively delivers the solutions for all queries of the Legal domain.",
   },
   {
     id: 3,
-    title: "Banana Speak",
-    live: "https://ankit1020bananaspeak.netlify.app",
-    github: "https://github.com/ankitgupta1020/Banana-speak.git",
-    img: "assets/projects/banana-speak.jpg",
-    techs: ["HTML", "CSS", "JavaScript"],
+    title: "Wappgo",
+    live: "https://wappgo.com/",
+    img: "assets/projects/wappgo.png",
+    techs: ["Legal Writing", "Social Media Posting", "Copy Writing", "Technical Writing"],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam voluptate quia ea libero accusantium molestias voluptatum assumenda exercitationem.",
+      "Wappgo provides service related to website development, app devlopment, legal consultancy and other services. ",
   },
   {
     id: 4,
-    title: "Palindrome Birthday",
-    live: "https://palindrome-buday.netlify.app",
-    github:
-      "https://github.com/ankitgupta1020/Is-your-birthday-a-palindrome-.git",
-    img: "assets/projects/palindrome-birthday.jpg",
-    techs: ["HTML", "CSS", "JavaScript"],
+    title: "Bael Wellness",
+    live: "https://baelwellness.com/",
+    img: "assets/projects/baelwellness.png",
+    techs: ["Blog Writing"],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam voluptate quia ea libero accusantium molestias voluptatum assumenda exercitationem.",
+      "Bael Wellness is a brand known for high quality standards and uniqueness when it comes to people’s well-being. Bael started a small scale business within a very limited geographic area in California, USA. ",
   },
   {
     id: 5,
-    title: "Is your birthday lucky?",
-    live: "https://is-it-your-lucky-birthday.netlify.app",
-    github: "https://github.com/ankitgupta1020/Is-your-birthday-lucky.git",
-    img: "assets/projects/birthday-lucky.jpg",
-    techs: ["HTML", "CSS", "JavaScript"],
+    title: "Softude",
+    live: "https://www.softude.com/",
+    img: "assets/projects/softude.png",
+    techs: ["Blog Writing", "Web Content Writing","Technical Blog Writing"],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam voluptate quia ea libero accusantium molestias voluptatum assumenda exercitationem.",
-  },
+      "Softude is the business transformation specialist exploring thriving opportunities to appoint digital breakthroughs to facilitate business growth.",
+  }
 ];
 
 const parentElement = document.querySelector(".carousel");
 
 projects.forEach((project) => {
-  const { title, live, github, img, techs, description } = project;
+  const { title, live, img, techs, description } = project;
 
   // Create slide container
   const slideContainer = document.createElement("div");
@@ -110,24 +104,8 @@ projects.forEach((project) => {
   projectLinks.classList.add(
     "project-links",
     "flex",
-    "align-items-center",
-    "gap-2"
+    "align-items-center"
   );
-
-  // Create source code link
-  const sourceCodeLink = document.createElement("a");
-  sourceCodeLink.classList.add("project-link");
-  sourceCodeLink.title = "Source Code";
-  sourceCodeLink.href = github;
-  sourceCodeLink.target = "_blank";
-  sourceCodeLink.rel = "noopener noreferrer";
-
-  // Create source code icon
-  const sourceCodeIcon = document.createElement("i");
-  sourceCodeIcon.classList.add("fa-brands", "fa-github", "fa-lg");
-
-  // Append source code icon to source code link
-  sourceCodeLink.appendChild(sourceCodeIcon);
 
   // Create live demo link
   const liveDemoLink = document.createElement("a");
@@ -145,7 +123,6 @@ projects.forEach((project) => {
   liveDemoLink.appendChild(liveDemoIcon);
 
   // Append all elements to project links container
-  projectLinks.appendChild(sourceCodeLink);
   projectLinks.appendChild(liveDemoLink);
 
   // Append all elements to project description container
