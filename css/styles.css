@@ -418,7 +418,7 @@ h1 span {
 .skill {
   aspect-ratio: 1 / 1;
   border-radius: 50%;
-  background-color: var(--clr-white);
+  background-color: var(--clr-background-transparent);
   box-shadow: rgba(0, 0, 0, 0.18) 0rem 0.2rem 0.4rem;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -436,6 +436,11 @@ h1 span {
   justify-content: center;
   text-align: center;
   display: flex;
+}
+
+.text-color{
+  /* color: var(--clr-primary); */
+  color: var(--clr-text-lighter);
 }
 
 /***********************/
